@@ -1,0 +1,60 @@
+@bg-color: #b7d4a8;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: bold 20px "Courier";
+    height: 500px;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 360px;
+    height: 420px;
+    background-color: @bg-color;
+    margin: 100px auto;
+    border: 10px solid black;
+    border-radius: 10px;
+}
+
+#stage {
+    position: relative;
+    width: 304px;
+    height: 304px;
+    border: 2px solid black;
+}
+
+#score-panel {
+    width: 304px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#snake {
+    &>div {
+        width: 10px;
+        height: 10px;
+        background-color: #000;
+        // 蛇的边框颜色和背景颜色相同
+        border: 1px solid @bg-color;
+        // 开启绝对定位
+        position: absolute;
+    }
+}
+
+#food {
+    position: absolute;
+    left: 50px;
+    top: 100px;
+    width: 1px;
+    height: 1px;
+    border: 5px solid black;
+    border-radius: 5px;
+}
